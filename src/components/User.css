@@ -1,0 +1,18 @@
+.user-container{
+    display: flex;
+align-items: center;
+gap: 2rem;
+margin-right: 3rem;
+}
+.icons{
+    color: white;
+}
+#bell{
+    border: 1px solid red;
+}
+#user{
+    border: 1px solid red;
+}
+.paragraph{
+    color: #94A3B8;
+}

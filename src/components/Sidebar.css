@@ -1,0 +1,6 @@
+.siderbar-container{
+    width: 12rem;
+    min-height: 100vh;
+    background-color: #0F172A;
+    border-radius: 0 2rem 2rem 0;
+}
