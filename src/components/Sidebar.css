@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .siderbar-container {
   width: 12rem;
   min-height: 100vh;
@@ -16,3 +17,11 @@
 span {
   color: #61dbfb;
 }
+=======
+.siderbar-container{
+    width: 12rem;
+    min-height: 100vh;
+    background-color: #0F172A;
+    border-radius: 0 2rem 2rem 0;
+}
+>>>>>>> 0d03b6c243cf3d6c9d7507e10c6693e5993a03e5
