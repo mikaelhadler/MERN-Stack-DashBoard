@@ -1,0 +1,6 @@
+.widget-items {
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

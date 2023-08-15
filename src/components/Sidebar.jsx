@@ -1,6 +1,7 @@
 import React from "react";
 import "./Sidebar.css";
 import Logo from "./Logo";
+import Widget from "./Widget";
 
 const Sidebar = () => {
   return (
@@ -10,6 +11,13 @@ const Sidebar = () => {
         <p className="p">
           React <span>App</span>
         </p>
+        <ul className="widgets-container">
+          <li>
+            <a href="/">
+              <Widget />
+            </a>
+          </li>
+        </ul>
       </div>
     </aside>
   );
