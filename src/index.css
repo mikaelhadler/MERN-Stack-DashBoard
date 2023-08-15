@@ -1,7 +1,21 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
   font-family:"Poppins", sans-serif;
+=======
+<<<<<<< HEAD
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  font-family: "Poppins", sans-serif;
+=======
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  font-family:"Poppins", sans-serif;
+>>>>>>> 0d03b6c243cf3d6c9d7507e10c6693e5993a03e5
+>>>>>>> 85aee16b9a4d1527e6218e9d9f414574201d2a63
   line-height: 1.5;
 
   color-scheme: light dark;
@@ -32,7 +46,13 @@ body {
   min-height: 100vh;
   overflow: hidden;
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+>>>>>>> 0d03b6c243cf3d6c9d7507e10c6693e5993a03e5
+>>>>>>> 85aee16b9a4d1527e6218e9d9f414574201d2a63
 
 button {
   border-radius: 8px;
