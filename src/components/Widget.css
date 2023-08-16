@@ -1,6 +1,16 @@
 .widget-items {
   margin-top: 10rem;
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.widget-dashboard,
+.widget-users {
+  display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+ul {
+  padding: 0;
 }

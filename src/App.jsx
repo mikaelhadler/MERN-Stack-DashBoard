@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 import Sidebar from "./components/sidebar";
 import Header from "./components/Header";
-im
 
 function App() {
   return (

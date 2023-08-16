@@ -6,16 +6,25 @@ const Widget = ({ title, children }) => {
     <>
       <section className="widget-container">
         <div className="widget-items">
-          <box-icon
-            color="#61dbfb"
-            type="solid"
-            name="dashboard"
-            size="md"
-          ></box-icon>
-          <p>Dashboard</p>
+          <div className="widget-dashboard">
+            <a href="/dashboard"></a>
+            <box-icon
+              color="#61dbfb"
+              type="solid"
+              name="dashboard"
+              size="md"
+            ></box-icon>
+            <p>Dashboard</p>
+          </div>
+          <div className="widget-users">
+            <a href="/"></a>
+            <box-icon size="md" color="#61dbfb" name="user"></box-icon>
+            <p>Users List</p>
+          </div>
         </div>
       </section>
     </>
   );
 };
+
 export default Widget;
