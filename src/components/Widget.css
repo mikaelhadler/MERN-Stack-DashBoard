@@ -2,7 +2,7 @@
   margin-top: 10rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 2rem;
 }
 .widget-dashboard,
 .widget-users {

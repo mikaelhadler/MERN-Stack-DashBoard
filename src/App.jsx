@@ -1,6 +1,7 @@
 import "./App.css";
 import Sidebar from "./components/sidebar";
 import Header from "./components/Header";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -12,9 +13,11 @@ function App() {
         <div className="content">
           <Header></Header>
         </div>
-        <main className="main-content">
-          <Outlet />
-        </main>
+        <div className="test">
+          <main className="main-content">
+            <Outlet />
+          </main>
+        </div>
       </div>
     </>
   );

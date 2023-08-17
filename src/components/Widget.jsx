@@ -7,19 +7,17 @@ const Widget = ({ title, children }) => {
       <section className="widget-container">
         <div className="widget-items">
           <div className="widget-dashboard">
-            <a href="/dashboard"></a>
             <box-icon
               color="#61dbfb"
               type="solid"
               name="dashboard"
               size="md"
             ></box-icon>
-            <p>Dashboard</p>
+            <a href="Dashboard">Dashboard</a>
           </div>
           <div className="widget-users">
-            <a href="/"></a>
             <box-icon size="md" color="#61dbfb" name="user"></box-icon>
-            <p>Users List</p>
+            <a href="/">Users List</a>
           </div>
         </div>
       </section>

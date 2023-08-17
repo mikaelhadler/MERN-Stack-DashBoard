@@ -5,16 +5,22 @@ import App from "./App.jsx";
 import UserList from "./components/pages/UserList.jsx";
 import "boxicons";
 import "./index.css";
+import Dasboard from "./components/pages/Dasboard.jsx";
 
 const router = createBrowserRouter([
-  // Correção da função
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "/users",
-    element: <UserList />,
+    children: [
+      {
+        path: "/",
+        element: <UserList />,
+      },
+      {
+        path: "Dashboard",
+        element: <Dasboard />,
+      },
+    ],
   },
 ]);
 

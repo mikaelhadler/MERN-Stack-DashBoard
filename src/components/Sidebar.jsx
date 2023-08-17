@@ -13,9 +13,7 @@ const Sidebar = () => {
         </p>
         <ul className="widgets-container">
           <li>
-            <a href="/">
-              <Widget />
-            </a>
+            <Widget></Widget>
           </li>
         </ul>
       </div>
