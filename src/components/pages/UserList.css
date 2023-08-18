@@ -9,7 +9,6 @@
   background-color: #1e293b;
   border-collapse: collapse;
   border-radius: 1rem;
-  /* border: 1px solid #94a3b8; */
 }
 .table td,
 th {
@@ -18,18 +17,15 @@ th {
   border: 2px solid #94a3b8;
 }
 .table tbody tr {
-  text-align: left;
+  text-align: center;
   font-weight: 700;
 }
 .table td {
   border: 2px solid #94a3b8;
 }
 .table tr {
-  text-align: left;
+  text-align: center;
 }
-/* .table td:nth-last-child(-n + 3) {
-  border-radius: 0 0 0 2rem;
-} */
 .table-header {
   font-size: 2rem;
 }

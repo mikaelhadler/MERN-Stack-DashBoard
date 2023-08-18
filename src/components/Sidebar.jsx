@@ -6,16 +6,14 @@ import Widget from "./Widget";
 const Sidebar = () => {
   return (
     <aside className="siderbar-container">
-      <div className="content-sidebar">
+      <div className="hhh">
         <Logo />
         <p className="p">
           React <span>App</span>
         </p>
-        <ul className="widgets-container">
-          <li>
-            <Widget></Widget>
-          </li>
-        </ul>
+      </div>
+      <div className="tt">
+        <Widget></Widget>
       </div>
     </aside>
   );
