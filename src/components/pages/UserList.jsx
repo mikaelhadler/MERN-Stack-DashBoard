@@ -1,13 +1,23 @@
 import React from "react";
 import "./UserList.css";
+import { useState, useEffect } from "react";
 
 const UserList = () => {
+  const [backendData, setBackendData] = useState([{}]);
+
+  useEffect(() => {
+    fetch("/api")
+      .then((response) => response.json())
+      .then((user) => {
+        setBackendData(user);
+      });
+  });
   return (
     <>
       <section className="users-dashboard">
         <div className="dashboard-header">
           <a href="">
-            <button className="btn">ADD USER</button>
+            <button>Add User</button>
           </a>
           <input className="input" type="text" placeholder="Search..." />
         </div>
@@ -37,6 +47,11 @@ const UserList = () => {
           </tbody>
         </table>
       </section>
+      {typeof backendData.users === "undefined" ? (
+        <p>Loading...</p>
+      ) : (
+        backendData.users.map((user, i) => <p key={i}>{user.firstname}</p>)
+      )}
     </>
   );
 };

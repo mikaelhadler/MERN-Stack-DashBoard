@@ -12,16 +12,17 @@
 }
 .table td,
 th {
-  font-size: 1rem;
   padding: 1rem;
   border: 2px solid #94a3b8;
 }
 .table tbody tr {
   text-align: center;
-  font-weight: 700;
 }
 .table td {
   border: 2px solid #94a3b8;
+}
+.table th {
+  font-weight: 600;
 }
 .table tr {
   text-align: center;
@@ -39,11 +40,11 @@ th {
   flex-direction: column;
   gap: 2rem;
 }
-.btn {
+/* .btn {
   background-color: #61dbfb;
   color: #1e293b;
   border-radius: 2rem;
-}
+} */
 .input {
   background-color: #1e293b;
   border: none;

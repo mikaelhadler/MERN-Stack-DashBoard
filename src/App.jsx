@@ -2,8 +2,18 @@ import "./App.css";
 import Sidebar from "./components/sidebar";
 import Header from "./components/Header";
 import { Outlet } from "react-router-dom";
+import { useEffect } from "react";
+
+import axios from "axios";
+import api from "./api/api";
 
 function App() {
+  useEffect(() => {
+    api.get("api").then((res) => {
+      console.log(res);
+    });
+  }, []);
+
   return (
     <>
       <div className="app-container">
