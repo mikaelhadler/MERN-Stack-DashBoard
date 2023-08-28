@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import api from "../../api/api";
 import axios from "axios";
 
 function Dashboard() {
   const [backendData, setBackendData] = useState([]);
 
   useEffect(() => {
-    api
-      .get("api/Dashboard")
+    axios
+      .get("Dashboard")
       .then((res) => {
         setBackendData(res.data.users);
       })
@@ -16,7 +15,20 @@ function Dashboard() {
       });
   }, []);
 
-  return <div>{backendData}</div>;
+  return (
+    <div>
+      <h1>Dashboard</h1>
+      <ul>
+        {backendData.map((users) => (
+          <li key={users._id}>
+            <strong>Nome:</strong> {users.firstname}
+            <br />
+            <strong>Email:</strong> {users.email}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 export default Dashboard;
