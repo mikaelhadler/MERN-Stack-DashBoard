@@ -48,7 +48,7 @@ const UserList = () => {
         </table>
       </section>
       {typeof backendData.users === "undefined" ? (
-        <p>Loading...</p>
+        <p>Loading ...</p>
       ) : (
         backendData.users.map((user, i) => <p key={i}>{user.firstname}</p>)
       )}
