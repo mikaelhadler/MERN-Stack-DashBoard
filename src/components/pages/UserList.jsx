@@ -6,7 +6,7 @@ const UserList = () => {
   const [backendData, setBackendData] = useState([{}]);
 
   useEffect(() => {
-    fetch("/api")
+    fetch("http://localhost:5000/api/Dashboard")
       .then((response) => response.json())
       .then((user) => {
         setBackendData(user);
