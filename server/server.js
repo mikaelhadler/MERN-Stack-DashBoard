@@ -13,10 +13,10 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, "../client")));
 
 app.get("/api/Dashboard", async (req, res) => {
-  const user = await UserModel.find();
+  const users = await UserModel.find();
   res.sendFile(
     path.join(__dirname, "../client", "index.html"),
-    res.json({ user })
+    res.json({ users })
   );
 });
 app.get("*", async (req, res) => {
@@ -28,6 +28,18 @@ app.get("/Dashboard", async (req, res) => {
   const users = await UserModel.find();
   res.json({ users });
 });
+
+app.delete("/api/user/:_id", async (req, res) => {
+   const { _id } = req.params
+  try {
+    await UserModel.deleteOne({ _id })
+    res.status(200).send()
+  } catch (error) {
+    console.log(error)
+    res.send(error)
+  }
+  
+})
 
 app.listen(port, () => {
   console.log(`Servidor Express está rodando na porta ${port}`);
