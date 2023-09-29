@@ -1,33 +1,26 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { set } from "mongoose";
 
-function Dashboard() {
+function Dashboard({UserData}) {
   const [backendData, setBackendData] = useState([]);
-
   useEffect(() => {
-    axios
-      .get("Dashboard")
-      .then((res) => {
-        setBackendData(res.data.users);
-      })
-      .catch((error) => {
-        console.error("Falha na conexão com a API", error);
-      });
+    fetch("http://localhost:5000/api", {
+      method: "GET",
+    })
+      .then((res) =>  res.json())
+        .then((data) =>{
+          console.log(data, "UserData");
+          setBackendData(data)
+          // console.log(backendData)
+        });
   }, []);
 
   return (
     <div>
-      <h1>Dashboard</h1>
-      <ul>
-        {backendData.map((users) => (
-          <li key={users._id}>
-            <strong>Nome:</strong> {users.firstname}
-            <br />
-            <strong>Email:</strong> {users.email}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <h1>Dashboard</h1>
+
+  </div>
   );
 }
 
