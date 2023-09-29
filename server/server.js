@@ -50,6 +50,39 @@ app.delete("/api/user/:_id", async (req, res) => {
   }
 });
 
+app.delete("/api/user/:_id", async (req, res) => {
+   const { _id } = req.params
+  try {
+    await UserModel.deleteOne({ _id })
+    res.status(200).send()
+  } catch (error) {
+    console.log(error)
+    res.send(error)
+  }
+  
+})
+
+app.post('/api/create', async (req, res) => {
+  try {
+      // const userData = req.params;]
+      const userData = [
+        {
+          firstname: "joe",
+          lastname: "doe",
+          email: "joedoe@gmail.com",
+          password: "joesdoe121",
+        }
+      ];
+
+      const newUser = await UserModel.create(req.body);
+      res.status(201).json(newUser);
+  } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Erro ao criar usuário' });
+  }
+});
+
+
 app.listen(port, () => {
   console.log(`Servidor Express está rodando na porta ${port}`);
 });

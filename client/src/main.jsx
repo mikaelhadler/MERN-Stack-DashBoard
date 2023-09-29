@@ -6,6 +6,7 @@ import UserList from "./components/pages/UserList.jsx";
 import "boxicons";
 import "./index.css";
 import Dasboard from "./components/pages/Dasboard.jsx";
+import CreateUser from "./components/pages/CreateUser.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <UserList />,
+      },
+      {
+        path: "/Add",
+        element: <CreateUser />,
       },
       {
         path: "Dashboard",
