@@ -9,27 +9,31 @@ const Widget = ({ title, children }) => {
   return (
     <section className="widget-container">
       <div className="widget-items">
-        <div
-          className={`widget-dashboard ${
-            location.pathname === "/dashboard" ? "active" : ""
-          }`}
-        >
-          <MdDashboard
-            size="24"
-            color={location.pathname === "/dashboard" ? "#61dbfb" : "#fff"}
-          />
-          <Link to="/dashboard">Dashboard</Link>
+        <div className="widget-box">
+          <div
+            className={`widget-dashboard ${
+              location.pathname === "/dashboard" ? "active" : ""
+            }`}
+          >
+            <MdDashboard
+              size="24"
+              color={location.pathname === "/dashboard" ? "#61dbfb" : "#fff"}
+            />
+            <Link to="/dashboard">Dashboard</Link>
+          </div>
         </div>
-        <div
-          className={`widget-users ${
-            location.pathname === "/" ? "active" : ""
-          }`}
-        >
-          <MdPerson
-            size="24"
-            color={location.pathname === "/" ? "#61dbfb" : "#fff"}
-          />
-          <Link to="/">Users List</Link>
+        <div className="widget-box">
+          <div
+            className={`widget-users ${
+              location.pathname === "/" ? "active" : ""
+            }`}
+          >
+            <MdPerson
+              size="24"
+              color={location.pathname === "/" ? "#61dbfb" : "#fff"}
+            />
+            <Link to="/">Users List</Link>
+          </div>
         </div>
       </div>
     </section>
